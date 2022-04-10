@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width">
+  <link rel="icon" href="../favicon.ico">
+  <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+  <link rel="stylesheet" href="../css/common.css">
+  <link rel="stylesheet" href="../css/event.css">
+  <script src="../js/jquery-3.6.0.min.js"></script>
+  <script src="../js/common.js"></script>
+  <script src="../js/event.js"></script>
+  <title>Event | CURIOUS(キュリオス)</title>
+</head>
+<body>
+
+  <!-- ヘッダー -->
+  <header>
+    <div class="inner">
+
+      <!-- ロゴ -->
+      <h1><a href="#"><img src="../images/logo.png" alt="CURIOUS"></a></h1>
+  
+      <!-- ナビゲーション -->
+      <nav>
+        <ul class="flex">
+          <li class="h_nav01"><a href="../index.html">Top</a></li>
+          <li class="h_nav02"><a href="../cocktailmenu/index.html">Menu_Caktail</a></li>
+          <li class="h_nav03"><a href="../foodmenu/index.html">Menu_Food</a></li>
+          <li class="h_nav04"><a href="../takeoutmenu/index.html">Menu_Takeout</a></li>
+          <li class="h_nav05"><a href="../access/index.html">Access</a></li>
+          <li class="h_nav06"><a href="../event/index.html">Event</a></li>
+        </ul>
+      </nav>
+
+      <!-- ハンバーガーメニュー -->
+      <div class="hum-menu">
+        <div class="hum-wrapper">
+          <div class="openbtn-area">
+            <button>open</button>
+          </div>
+        </div>
+      </div>
+      <div class="hum-nav">
+        <ul>
+          <li><a href="../index.html">Top</a></li>
+          <li><a href="../cocktailmenu/index.html">Menu_Cacktail</a></li>
+          <li><a href="../foodmenu/index.html">Menu_Food</a></li>
+          <li><a href="../takeoutmenu/index.html">Menu_Take Out</a></li>
+          <li><a href="../access/index.html">Access</a></li>
+          <li><a href="../event/index.html">Event</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+  </header>
+
+  <div class="content_wrapper">
+
+    <!-- メインコンテンツ -->
+    <main>
+      <h2><span><img src="../images/event.png" alt="event"></span></h2>
+
+      <!-- event -->
+      <section class="inner flex">    
+        <figure><img class="PC" src="../images/img_event_table.png" alt="table"><img class="SP" src="../images/img_event_table(SPver).png"></figure>
+        <div>
+          <p class="p1">目黒川沿いにある「CURIOS」。<br>
+            中目黒駅からのアクセスがよく、お集まりに大変便利です。</p>
+          <p class="p2">また当店では、シーンに合わせて選べるプランも人気です。<br>
+            設備も充実しており、飲み放題も3つのプランをご用意。<br>
+            思い出に残るひと時をお過ごしいただけるよう、心を込めて
+            おもてなしさせていただきます。</p>
+
+            <div class="bg flex">
+              <div>
+                <h3><span>当店<small>では、</small></span><br>
+                <span>10名様<small>からの</small></span><br>
+                <span>貸切<small>も</small>ご相談<small>を</small></span><br>
+                <span>承っております。</span></h3>
+                <figcaption>専属のバーテンダーが<br>ご対応いたします！</figcaption>
+              </div>
+              <figure><img src="../images/img_event_bartender.png" alt="bartender"></figure>
+            </div>
+        </div>
+      </section>
+
+      <!--予約フォーム-->
+      <div class="form scroll-fade">
+        <section class="inner">
+          <h5>ご予約フォーム</h5>        
+          <form action="program.php" method="post">
+            <div class="flex">
+              <dl>
+                <dt>お名前<span>必須</span></dt>
+                <dd class="alert namealert">*お名前をご記入ください。</dd>
+                <dd><input type="text" name="名前" placeholder="目黒 太郎"></dd>
+
+                <dt>メールアドレス<span>必須</span></dt>
+                <dd class="alert emailalert">*メールアドレスをご記入ください。</dd>
+                <dd><input type="email" name="メールアドレス" placeholder="info@curios.jp"></dd>
+
+                <dt>電話番号<span>必須</span></dt>
+                <dd class="alert telalert">*電話番号をご記入ください。</dd>
+                <dd><input type="tel" name="電話番号" placeholder="000-0000-0000"></dd>
+
+                <dt>お問い合わせ内容</dt>
+                <dd><textarea name="message"></textarea></dd>
+              </dl>        
+
+              <table>
+                <tr>
+                  <th>日</th>
+                  <th>月</th>
+                  <th>火</th>
+                  <th>水</th>
+                  <th>木</th>
+                  <th>金</th>
+                  <th>土</th>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td>1</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>3</td>
+                  <td>4</td>
+                  <td>5</td>
+                  <td>6</td>
+                  <td>7</td>
+                  <td>8</td>
+                </tr>
+                <tr>
+                  <td>9</td>
+                  <td>10</td>
+                  <td>11</td>
+                  <td>12</td>
+                  <td>13</td>
+                  <td>14</td>
+                  <td>15</td>
+                </tr>
+                <tr>
+                  <td>16</td>
+                  <td>17</td>
+                  <td>18</td>
+                  <td>19</td>
+                  <td>20</td>
+                  <td>21</td>
+                  <td>22</td>
+                </tr>
+                <tr>
+                  <td>23</td>
+                  <td>24</td>
+                  <td>25</td>
+                  <td>26</td>
+                  <td>27</td>
+                  <td>28</td>
+                  <td>29</td>
+                </tr>
+                <tr>
+                  <td>30</td>
+                  <td>31</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+              </table>
+            </div>
+            <div class="submitbtn"><input type="submit" value="送信"></div>
+          </form>        
+        </section>
+      </div>
+
+    </main>
+
+    <!-- フッター -->
+    <footer>
+      
+      <!-- 店舗情報 -->
+      <div class="info flex inner">
+        <h4><a href="#"><img src="../images/logo.png" alt="CURIOUS"></a></h4>
+        <address>
+          <p>東京都目黒区中目黒1丁目<br>リバーサイドNAKAME 1F<br>11:00～21:00（ラストオーダー 20:30）</p>
+        </address>
+        <div class="topic_wrapper">
+          <div class="topic_inner">
+            <h3><span>オシャレ<snall>な</snall>ノンアル</span></h3>
+            <h3><span>みんな<small>に</small>シェア！</span></h3>
+            <p class="insta"><a href="#"><img src="../images/icon_ins.png" alt="instagram"></a></p>
+            <p class="twitter"><a href="#"><img src="../images/icon_twi.png" alt="twitter"></a></p>
+          </div>
+        </div>
+
+        <!-- Totopボタン -->
+        <button class="totop">
+          Totop
+        </button>
+      </div>
+      
+      <!-- コピーライト -->
+      <div class="copyright">
+        <div class="inner">
+          <p><small>Copyright&copy; Oishi Gohan. All rights Reserved.</small></p>
+        </div>
+      </div>
+      
+      <!-- SNSアイコン -->
+      <div class="sns_icons">
+        <p class="insta"><a href="#"><img src="../images/icon_ins.png" alt="instagram"></a></p>
+        <p class="twitter"><a href="#"><img src="../images/icon_twi.png" alt="twitter"></a></p>
+      </div>  
+    </footer>
+    
+  </div>
+</body>
+</html>

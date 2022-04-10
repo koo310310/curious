@@ -1,0 +1,247 @@
+@charset "UTF-8";
+
+/* 共通 */
+span {
+  line-height: 1.3em;
+  background: linear-gradient(transparent 40%, #fff 0%);
+}
+
+.fade-in {
+  opacity: 0;
+  transition-duration: 500ms;
+  transition-property: opacity, transform;
+  transform: translate(0, 50px);
+}
+
+.scroll-in {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+.content_wrapper {
+  overflow: hidden;
+}
+
+/* メインコンテンツ */
+main {
+  margin-top: 165px;
+  padding-bottom: 100px;
+}
+
+/* メイン - フードメニュー */
+.menu h2 {
+  margin-left: 15px;
+  margin-right: 40px;
+  margin-bottom: 40px;
+  background: linear-gradient(transparent 40%, #fff 0%);
+}
+
+.menu div {
+  margin-top: 20px;  
+}
+
+.menu h3 {
+  font-size: 25px;
+}
+
+.menu p {
+  font-size: 15px;
+}
+
+#food .inner div:nth-of-type(1) figure {
+  width: 72%;
+  position: relative;
+  z-index: 10;
+}
+
+#food .inner div:nth-of-type(1) figure::after {
+  content: "";
+  display: block;
+  width: 392px;
+  height: 202px;
+  position: absolute;
+  top: -20%;
+  left: 50%;
+  z-index: -10;
+  background-image: url(../images/bg_foodmenu_food.png);
+}
+
+#food .inner div:nth-of-type(1) figure img {
+  width: 100%;
+}
+
+#food .inner div:nth-of-type(2) {
+  transform: translateX(-100px);
+}
+
+#food .inner div:nth-of-type(2) figure {
+  margin-right: 40px;
+  position: relative;
+  width: 80%;
+}
+
+#food .inner div:nth-of-type(2) figure img {
+  width: 100%;
+}
+
+#food .inner div:nth-of-type(2) figure::before {
+  content: "";
+  display: block;
+  width: 315px;
+  height: 183px;
+  position: absolute;
+  top: -70px;
+  right: -220px;
+  z-index: -10;
+  background-image: url(../images/bg_foodmenu_cake.png);
+}
+
+#food .inner div:nth-of-type(2) figure::after {
+  content: "";
+  display: block;
+  width: 291px;
+  height: 210px;
+  position: absolute;
+  bottom: 80px;
+  right: -400px;
+  z-index: -10;
+  background-image: url(../images/bg_foodmenu_cafe.png);
+}
+
+#food .inner div:nth-of-type(2) ul {
+  margin-top: 100px;
+  width: 20%;
+}
+
+#food .inner div:nth-of-type(3) {
+  transform: translateX(25%);
+  position: relative;
+}
+
+#food .inner div:nth-of-type(3)::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 710px;
+  height: 644px;
+  top: -70px;
+  left: -590px;
+  background-size: contain;
+  background-image: url(../images/img_foodmenu_04.png);
+}
+
+#food .inner div:nth-of-type(3) figure {
+  width: 50%;
+  transform: translateY(-100px);
+}
+
+#food .inner div:nth-of-type(3) figure img {
+  width: 100%;
+}
+
+#food .inner div:nth-of-type(3) ul {
+  width: 25%;
+  margin-top: 70px;
+}
+
+#food .inner div dl,
+#food .inner div ul {
+  font-size: 19px;
+  line-height: 33px;
+}
+
+#food .inner div dl {
+  margin-left: 30px;
+  width: 28%;
+}
+
+#food .inner div dl dt::before,
+#food .inner div ul li::before {
+  content: "●";
+  margin-right: 5px;
+}
+
+#food .inner div dl dd {
+  margin-left: 25px;
+}
+
+#food .inner > p {
+  text-align: right;
+  font-size: 27px;
+  font-weight: bold;
+  letter-spacing: .3em;
+  transform: translateY(-50px);
+}
+
+@media screen and (max-width: 640px){
+  .menu {
+    margin-bottom: 30px;
+  }
+  
+  #food .inner div dl {
+    margin-left: 0;
+    width: 70%;
+    margin: 0 15% 30px 15%;
+  }
+
+  #food .inner div:nth-of-type(1) figure {
+    width: 100%;
+    z-index: 10;
+  }
+
+  #food .inner div:nth-of-type(1) figure::after {
+    display: none;
+  }
+
+  #food .inner div:nth-of-type(2) {
+    transform: translateX(0);
+    display: flex;
+    flex-flow: column;
+    flex-direction: column-reverse;
+  }
+  
+  #food .inner div:nth-of-type(2) figure {
+    margin-right: 0;
+    position: static;
+    width: 100%;
+  }
+  
+  #food .inner div:nth-of-type(2) figure::before {
+    display: none;
+  }
+  
+  #food .inner div:nth-of-type(2) figure::after {
+    display: none;
+  }
+  
+  #food .inner div:nth-of-type(2) ul {
+    margin: 0 15% 30px 15%;
+    width: 70%;
+  }
+  
+  #food .inner div:nth-of-type(3) {
+  transform: translateX(0);
+  }
+  
+  #food .inner div:nth-of-type(3)::before {
+    display: none;
+  }
+  
+  #food .inner div:nth-of-type(3) figure {
+    width: 100%;
+    transform: translateY(0);
+  }
+  
+  #food .inner div:nth-of-type(3) ul {
+    margin: 0 15% 30px 15%;
+    width: 70%;
+  }
+
+  #food .inner > p {
+    text-align: right;
+    font-size: 27px;
+    font-weight: bold;
+    letter-spacing: .3em;
+    transform: translateY(0);
+  }
+}

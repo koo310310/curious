@@ -1,0 +1,381 @@
+@charset "UTF-8";
+
+/* 共通 */
+body {
+  font-family: "游ゴシック", "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  background-image: url(../images/bk_body.jpg);
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+.flex {
+  display: flex;
+}
+
+.inner {
+  width: 960px;
+  margin: auto;
+}
+
+.content_wrapper {
+  overflow: hidden;
+}
+
+/* ヘッダー */
+header {
+  width: 100%;
+  top: 0;
+  left: 0;
+  height: 100px;
+  background-image: url(../images/bk_nav.jpg);
+  position: fixed;
+  z-index: 900;
+}
+
+header .inner {
+  position: relative;
+}
+
+header .inner h1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  margin-top: 3px;
+  margin-left: 5px;
+}
+
+header .inner h1 img{
+  width: 42%;
+  height: auto;
+}
+
+header .inner nav ul {
+  justify-content: flex-end;
+  margin-right: 50px;
+}
+
+header .inner nav ul li {
+  border-left: 1.5px solid #000;
+  margin: 10px 0;
+  height: 80px;
+}
+
+header .inner nav ul li a {
+  display: block;
+  height: 100%;
+  width: calc(960px / 1.7 / 6);
+  font-size: 0;
+  color: transparent;
+  background-position: center center;
+}
+
+header .inner nav ul .h_nav01 a {
+  background-image: url(../images/nav_top.png);
+}
+
+header .inner nav ul .h_nav02 a {
+  background-image: url(../images/nav_caktail.png);
+}
+
+header .inner nav ul .h_nav03 a {
+  background-image: url(../images/nav_food.png);
+}
+
+header .inner nav ul .h_nav04 a {
+  background-image: url(../images/nav_takeout.png);
+}
+
+header .inner nav ul .h_nav05 a {
+  background-image: url(../images/nav_access.png);
+}
+
+header .inner nav ul .h_nav06 a {
+  background-image: url(../images/nav_event.png);
+}
+
+header .inner nav ul .h_nav01 a:hover {
+  background-image: url(../images/nav_top_2.png);
+}
+
+header .inner nav ul .h_nav02 a:hover {
+  background-image: url(../images/nav_caktail_2.png);
+}
+
+header .inner nav ul .h_nav03 a:hover {
+  background-image: url(../images/nav_food_2.png);
+}
+
+header .inner nav ul .h_nav04 a:hover {
+  background-image: url(../images/nav_takeout_2.png);
+}
+
+header .inner nav ul .h_nav05 a:hover {
+  background-image: url(../images/nav_access_2.png);
+}
+
+header .inner nav ul .h_nav06 a:hover {
+  background-image: url(../images/nav_event_2.png);
+}
+
+/* ハンバーガーメニュー */
+.hum-menu {
+  position: fixed;
+  top: 8px;
+  right: 20px;
+  z-index: 250;
+  display: none;
+}
+
+.hum-wrapper {
+  position: relative;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.hum-wrapper .openbtn-area {
+  transition: all .4s;
+}
+
+.hum-wrapper button {
+  font-size: 0;
+  line-height: 0;
+  color: transparent;
+  width: 83px;
+  height:84px;
+  border-radius: 50%;
+  background-image: url(../images/hum_icon_open.png);
+}
+
+.hum-wrapper button.active {
+  background-image: url(../images/hum_icon_close.png);
+}
+
+.hum-wrapper.active .openbtn-area {
+  transform: rotateY(-360deg);
+}
+
+.hum-nav {
+  background-color: #fff;
+  width: 100%;
+  height: 100%;
+  opacity: .9;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 200;
+  display: none;
+}
+
+.hum-nav ul {
+  margin-top: 80px;
+}
+
+.hum-nav ul li {
+  margin: auto;
+  text-align: center;
+}
+
+.hum-nav a {
+  font-size: 40px;
+  color: #333;
+  font-weight: bold;
+}
+
+.hum-nav a:hover {
+  text-decoration: underline;
+  opacity: .7;
+}
+
+.hum-nav.active {
+  display: block;
+}
+
+/* フッター */
+footer {
+  background-image: url(../images/bk_nav.jpg);
+}
+
+footer .inner {
+  padding-left: 50px;
+  position: relative;
+}
+
+/* フッター - 店舗情報 */
+
+footer .info {
+  padding-top: 25px;
+  padding-bottom: 25px;
+  height: 160px;
+}
+
+footer .info h4 {
+  margin-right: 30px;
+}
+
+footer .info h4 img {
+  width: 135px;
+  object-fit: cover;
+}
+
+footer .info address {
+  font-size: 16px;
+}
+
+footer .info p {
+  margin-top: 10px;
+  line-height: 29px;
+}
+
+footer .topic_wrapper {
+  position: relative;
+  width: 50%;
+  height: 320px;
+  background-image: url(../images/bk_concept.png);
+  transform: rotate(-10deg) translateX(60px) translateY(-120px);
+  filter: drop-shadow(5px 5px 5px #aaa);
+}
+
+footer .topic_wrapper .topic_inner {
+  width: 70%;
+  margin: 30px auto 0;
+  justify-content: center;
+}
+
+footer .topic_wrapper .topic_inner .left,
+footer .topic_wrapper .topic_inner .right {
+  padding: 0 5px;
+}
+
+footer .topic_wrapper .topic_inner h3 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+footer .topic_wrapper .topic_inner h3 span {
+  line-height: 1.3em;
+  background: linear-gradient(transparent 40%, #fff 0%);
+}
+
+footer .topic_wrapper .topic_inner h3:nth-child(2) {
+  margin-left: 90px;
+}
+
+footer .topic_wrapper .topic_inner p {
+  height: 74px;
+}
+
+footer .topic_wrapper .topic_inner .insta {
+  margin-left: 60px;
+}
+
+footer .topic_wrapper .topic_inner .insta img {
+  position: relative;
+  transform: rotate(10deg);
+}
+
+footer .topic_wrapper .topic_inner .twitter {
+  margin-top: 0;
+  margin-left: 20px;
+}
+
+footer .topic_wrapper .topic_inner .twitter img {
+  transform: rotate(10deg);
+}
+
+footer .topic_wrapper .topic_inner .insta::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  right: 140px;
+  width: 124px;
+  height: 149px;
+  background-image: url(../images/icon_sma.png);
+  transform: rotate(10deg) translateY(10px);
+}
+
+/* フッター - コピーライト */
+footer .copyright {
+  background-color: #fff;
+  padding: 10px 0;
+  font-size: 12px;
+}
+
+/* フッター - SNSリンク */
+footer .sns_icons {
+  display: none;
+}
+
+footer .sns_icons .insta {
+  position: fixed;
+  bottom: 130px;
+  right: 25px;
+}
+
+footer .sns_icons {
+  position: fixed;
+  bottom: 50px;
+  right: 25px;
+  z-index: 900;
+}
+
+/* フッター - Totopボタン */
+footer .totop {
+  position: absolute;
+  background-image: url(../images/icon_totop.png);
+  top: -100px;
+  left: 30px;
+  width: 77px;
+  height: 91px;
+  font-size: 0;
+  line-height: 0;
+  color: transparent;
+  cursor: pointer;
+}
+
+/* レスポンシブ-スマートフォン */
+@media screen and (max-width: 640px){
+  /* 共通 */
+  .flex {
+    display: block;
+  }
+
+  .inner {
+    width: auto;
+    padding: 0 20px;
+  }
+
+  /* ヘッダー */
+  header nav {
+    display: none;
+  }
+
+  /* ヘッダー - メニュー */
+  .hum-menu {
+    display: block;
+  }
+
+  /* フッター */
+  footer .inner.info.flex {
+    display: flex;
+    padding: 10px;
+  }
+
+  footer .info .topic_wrapper {
+    display: none;
+  }
+
+  footer .sns_icons {
+    display: block;
+  }
+
+}

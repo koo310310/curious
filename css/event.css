@@ -1,0 +1,334 @@
+@charset "UTF-8";
+main{
+  margin-top: 140px;
+}
+
+h2{
+  text-align: center;
+}
+h2 span{
+  background: linear-gradient(transparent 0%, #fff 0%);
+}
+section.inner{
+  margin-top: 60px;
+  justify-content: space-between;
+}
+.inner > figure .PC{
+  margin-right: 30px;
+  margin-left: 65px;
+}
+.inner > figure .SP{
+  display: none;
+}
+.inner p{
+  line-height: 29px;
+}
+.inner .p1{
+  margin-bottom: 40px;
+}
+.inner .p2{
+  width: 440px;
+}
+.bg{
+  width: 455px;
+  height: 320px;
+  background-image: url(../images/bk_concept.png);
+  transform: rotate(-10deg) /*translateX(60px) translateY(-120px)*/;
+  filter: drop-shadow(5px 5px 5px #aaa);
+  margin-left: 100px;
+  justify-content: center;
+  padding: 60px 20px 50px 30px;
+  box-sizing: border-box;
+  margin-top: 30px;
+  position: relative;
+  z-index: 100;
+}
+.bg div h3{  
+  font-size: 19px;
+  line-height: 31px;
+  font-weight: bold;
+}
+.bg div h3 span{
+  background: linear-gradient(transparent 40%, #fff 0%);
+}
+.bg div h3 small{
+  font-size: 75%;
+}
+.bg div figcaption{
+  font-size: 14px;
+  line-height: 21px;
+  margin-top: 25px;
+}
+.bg figure img{
+  border: 5px solid #fff;
+}
+
+/*予約フォーム*/
+
+/*scroll*/
+.scroll-fade {
+  opacity : 0;
+  transform: translateY(20px);
+  transition: all 1s;
+}
+
+.form .flex{
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.form{
+  background-color: #fff;
+  padding: 25px 75px 0 95px;
+  box-sizing: border-box;
+}
+.form h5{
+  font-size: 21px;
+  position: relative;
+  text-align: center;
+  margin-bottom: 60px;
+}
+.form h5::before{
+  content: "";
+  display: block;
+  position: absolute;
+  background-image: url(../images/bk_cak02.png);
+  width: 181px;
+  height: 231px;
+  background-size: 35%;
+  top: -40px;
+  left: 337px;
+  transform: rotate(-10deg);
+}
+.form h5::after{
+  content: "";
+  display: block;
+  position: absolute;
+  background-image: url(../images/bk_cak01.png);
+  width: 135px;
+  height: 246px;
+  background-size: 50%;
+  top: -50px;
+  left: 546px;
+  transform: rotate(10deg);
+}
+
+/*カクテルゆれる*/
+
+.form h5::before {
+    animation: horizontal1 1s ease-in-out infinite alternate;
+}
+.form h5::after {
+    animation: horizontal2 1s ease-in-out infinite alternate;
+}
+
+.form h5::before {
+    animation-duration: 0.9s;
+}
+.form h5::after {
+    animation-duration: 1.1s;
+}
+
+@keyframes horizontal1 {
+    0% { -webkit-transform: rotate(-10deg) translate(-6px, 1px); }
+  100% { -webkit-transform: rotate(-10deg) translate(0px, 3px); }
+}
+
+@keyframes horizontal2 {
+    0% { -webkit-transform:rotate(10deg) translate(5px,5px); }
+  100% { -webkit-transform:rotate(10deg) translate(0px,3px); }
+}
+
+/*フォーム*/
+
+.form dl dt{
+margin-bottom: 1px;
+}
+.form dl dt span{
+  background-color: #000;
+  color: #fff;
+  font-size: 80%;
+  display: inline-block;
+  margin-left: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  box-sizing: border-box;
+}
+.form dl dd{
+  margin-bottom: 25px;
+}
+.form dl dd input{
+  width: 500px;
+  border-bottom: 1px solid #000;
+}
+.form dl dd textarea{
+  border: 1px solid #000;
+  width: 500px;
+  height: 133px;
+  resize: none;
+}
+/*Submit form error*/
+.form .alert{
+  font-size: 85%;
+  color: #ff0000;
+}
+
+/*カレンダー*/
+table{
+  border-collapse: collapse;
+  border-spacing: 0;
+  margin-left: 100px;
+  border: 1px solid #000;
+}
+table th{
+  background-color: #000;
+  color: #fff;
+}
+table th, td{
+  width: 35px;
+  height: 35px;
+}
+table td{
+  border: 1px solid #b2b2b2;
+  text-align: center;
+}
+/*ボーダーのカラー設定*/
+table tr td:last-of-type{
+  border-right: none;
+}
+table tr td:first-of-type{
+  border-left: none;
+}
+table tr:last-of-type td{
+  border-bottom: none;
+}
+
+/*送信ボタン*/
+.submitbtn{
+  box-sizing: border-box;
+  padding-bottom: 75px;
+  margin-top: 30px;
+  text-align: center;
+}
+.submitbtn input{
+  background-color: #000;
+  color: #fff;
+  width: 79px;
+  height: 35px;
+  line-height: 1em;
+}
+
+
+
+
+/*SP ver.*/
+@media screen and (max-width:640px){
+  img{
+    max-width: 100%;
+    height: auto;
+  }
+  .inner figure{
+    width: auto;
+    margin: auto;
+  }
+
+
+  /*eventの画像トリミング*/
+  .inner > figure .PC{
+    display: none;  
+  }
+  .inner > figure .SP{
+    display: block;
+    margin: auto;
+  }
+  .inner p{
+    margin: auto;
+  }
+  .inner .p1{
+    margin-top: 20px;
+  }
+  .inner .p2{
+    width: auto;
+  }
+
+  /*バーテンダー写真部分*/
+  .bg{
+    position: relative;
+    background-size: contain;
+    width: 99%;
+    height: auto;
+    transform: rotate(-10deg)/* translateY(-30px)*/;
+    margin-left: 0;
+    padding-bottom: 70.32967%;
+  }
+  .bg figure img{
+    position: absolute;
+    top: 25px;
+    right: 25px;
+  }
+  .bg div h3{
+    position: absolute;
+    top: 25px;
+    left: 25px;
+  }
+  .bg div figcaption{
+    position: absolute;
+    top: 150px;
+    left: 25px;
+  }
+
+  /*予約フォーム*/
+  .form .flex{
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .form{
+    padding: 10px 10px 0 10px;
+    box-sizing: border-box;
+  }
+  .form h5{
+    margin-bottom: 30px;
+  }
+  .form dl{
+    width: 100%;
+    margin-top: 30px;
+  }
+    .form h5::before{
+    content: "";
+    display: block;
+    position: absolute;
+    background-image: url(../images/bk_cak02.png);
+    width: 181px;
+    height: 231px;
+    background-size: 40%;
+    top: -65px;
+    left: -1px;
+    transform: rotate(-10deg);
+  }
+  .form h5::after{
+    content: "";
+    display: block;
+    position: absolute;
+    background-size: contain;
+    background-image: url(../images/bk_cak01.png);
+    width: 65px;
+    padding-bottom: 75.48148%;
+    top: 780px;
+    left: auto;
+    right: 15px;
+    transform: rotate(10deg);
+  }
+  .form dl dd input{
+    width: 100%;
+  }
+  .form dl dd textarea{
+    width: 100%;
+  }
+  table{
+    margin: auto;
+  }
+
+
+
+
+
+}
